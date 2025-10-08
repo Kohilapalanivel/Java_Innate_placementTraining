@@ -1,0 +1,271 @@
+1. Use nested loop to print square pattern :
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n = s.nextInt();
+	    for(int i=1;i<=n;i++)
+	    {
+	        for(int j=1;j<=n;j++)
+	        {
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+SAMPLE INPUT & OUTPUT:
+4
+
+* * * * 
+* * * * 
+* * * * 
+* * * * 
+
+
+2. Right-Angled Triangle
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n = s.nextInt();
+	    for(int i=1;i<=n;i++)
+	    {
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+SAMPLE INPUT & OUTPUT:
+4
+* 
+* * 
+* * * 
+* * * * 
+
+3.Inverted Triangle
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n = s.nextInt();
+	    for(int i=n;i>=1;i--)
+	    {
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+SAMPLE INPUT & OUTPUT: 
+5
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+4. Number Pyramid
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n = s.nextInt();
+	    for(int i=1;i<=n;i++)
+	    {
+	        for(int j=1;j<=i;j++)
+	        {
+	            System.out.print(j + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+SAMPLE INPUT & OUTPUT: 
+5
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+
+5. Pyramid Pattern
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        s.close();
+
+        for (int i = 1; i <= n; i++) 
+        {
+            for (int j = i; j < n; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <i; k++) 
+            {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+SAMPLE INPUT & OUTPUT: 
+5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+6.Diamond Shapes
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        s.close();
+
+        for (int i = 1; i <= n; i++) 
+        {
+            for (int j = i; j < n; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) 
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+        for (int i = n-1; i >=1; i--) 
+        {
+            for (int j = i; j < n; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) 
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+SAMPLE INPUT & OUTPUT: 
+5
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+7.Hollow Patterns
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n = s.nextInt();
+	    for(int i=1;i<=n;i++)
+	    {
+	        for(int j=1;j<=n;j++)
+	        {
+	            if(i==1 || i==n || j==1 || j==n)
+	            {
+	            System.out.print("* ");
+	            }
+	            else
+	            {
+	            System.out.print("  ");
+	                
+	            }
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+SAMPLE INPUT & OUTPUT: 
+5
+
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+
+8.Floyd’s Triangle
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        s.close();
+        int num = 1;
+
+        for (int i = 1; i <= n; i++) 
+        {
+            for (int j = i; j < n; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <i; k++) 
+            {
+                System.out.print(num + " ");
+                num++;
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+SAMPLE INPUT & OUTPUT: 
+5
+
+
+   1 
+  2 3 
+ 4 5 6 
+7 8 9 10 
