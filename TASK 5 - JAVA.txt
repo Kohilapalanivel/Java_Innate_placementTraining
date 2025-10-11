@@ -1,0 +1,111 @@
+1.	Write a Java class Vechicle with fields brand and price, and a method display(). Create
+an object and call the method.
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        vehicle v = new vehicle("Kia",1000000);
+        v.display();
+    }
+}
+class vehicle
+{
+    String brand;
+    int price;
+    void display()
+    {
+        System.out.println("The brand: "+ brand + "Price: "+price);
+    }
+}
+
+
+
+2.	Declare and initialize an object of class Student with fields name and age. Print
+the values.
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Student st = new Student();
+        Scanner s = new Scanner(System.in);
+        st.name = s.nextLine();
+        st.age = s.nextInt();
+        st.display();
+    }
+}
+class Student
+{
+    String name;
+    int age;
+    void display()
+    {
+        System.out.println("Student name: "+ name + "\nAge: "+age);
+    }
+}
+
+
+3.	Write a method int add(int a, int b) that returns the sum of two numbers. Show method calling.
+
+import java.util.Scanner;
+public class Main
+{
+    static int add(int n1,int n2)
+    {
+        return n1+n2;
+    }
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+        int n1 = s.nextInt();
+        int n2 = s.nextInt();
+        int result = add(n1,n2);
+        System.out.println("The sum of two number is: "+result);
+    }
+} 	
+
+
+4.	Write a recursive method to calculate factorial of a number. 
+
+import java.util.Scanner;
+public class Main
+{
+    static int fact(int n)
+    {
+        if(n==0 || n==1)
+        {
+            return 1;
+        }
+        else
+        {
+            return n*fact(n-1);
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int factorial = fact(n);
+        System.out.println("The Factorial of the number "+  n + " is: "+factorial);
+    }
+}
+
+
+5.	Write a Java program that calls a predefined method (like length() of a string).
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        int len = str.length();
+        System.out.println("The Length of the String "+  str + " is: "+len);
+    }
+}
