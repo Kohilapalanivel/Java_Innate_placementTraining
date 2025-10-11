@@ -1,0 +1,155 @@
+1.Count vowels in a string
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String a = s.nextLine();
+        int count = 0;
+        String str = a.toLowerCase();
+        for(int i=0;i<str.length();i++)
+        {
+            char c = str.charAt(i);
+            if(c=='a' || c=='e' ||c=='i'|| c=='o' || c=='u')
+            {
+                count++;
+            }
+        }
+        System.out.println("The Total number of vowels in a String is " + count);
+    }
+}
+
+
+2.Reverse a string
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String a = s.nextLine();
+        System.out.print("The Reversed of the given String " + a + " is: ");
+        for(int i=a.length()-1;i>=0;i--)
+        {
+            char c = a.charAt(i);
+            System.out.print(c);
+        }
+    }
+}
+
+
+3.Check if a string is a palindrome
+
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String a = s.nextLine();
+        System.out.println("Original String: "+ a);
+        String c = "";
+        for(int i=a.length()-1;i>=0;i--)
+        {
+             c += a.charAt(i);
+        }
+        System.out.println("Reversed String: " + c);
+        if(a.equals(c))
+        {
+            System.out.println("The given String " + a + " is palindrome");
+        }
+        else
+        {
+            System.out.println("The given String " + a + " is not palindrome");
+        }
+    }
+}
+
+
+4.Find duplicate characters
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter a string: ");  
+        String str = s.nextLine();
+        s.close();
+        int count = 0;
+
+        System.out.println("Duplicate characters:");
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j)) {
+                    count++;
+                }
+            }
+
+            if (count > 1 && str.charAt(i) != ' ')
+                System.out.println(str.charAt(i) + " : " + count);
+        }
+    }
+}
+
+5.Check if two strings are anagrams
+
+import java.util.*;
+
+public class AnagramCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String s1 = sc.nextLine();
+        System.out.print("Enter second string: ");
+        String s2 = sc.nextLine();
+
+        s1 = s1.replaceAll("\\s+", "").toLowerCase();
+        s2 = s2.replaceAll("\\s+", "").toLowerCase();
+
+        if (s1.length() != s2.length()) {
+            System.out.println("Not anagrams");
+        } else {
+            char[] arr1 = s1.toCharArray();
+            char[] arr2 = s2.toCharArray();
+            Arrays.sort(arr1);
+            Arrays.sort(arr2);
+
+            if (Arrays.equals(arr1, arr2))
+                System.out.println("Strings are anagrams.");
+            else
+                System.out.println("Strings are not anagrams.");
+        }
+
+        sc.close();
+    }
+}
+
+
+6.Compress a string using run-length encoding (e.g., aaabb → a3b2).
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = s.nextLine();
+        s.close();
+
+        String result = "";
+        int count = 1;
+
+        for (int i = 0; i < str.length(); i++) {
+            // Check if next character is same as current
+            if (i + 1 < str.length() && str.charAt(i) == str.charAt(i + 1)) {
+                count++;
+            } else {
+                result = result + str.charAt(i) + count;
+                count = 1;
+            }
+        }
+
+        System.out.println("Compressed string: " + result);
+    }
+}
+
+
